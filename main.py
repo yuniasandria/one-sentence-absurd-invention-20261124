@@ -1,6 +1,11 @@
 import os
 
-SENTENCE = "A Wi-Fi router on tiny legs that follows you from room to room so the signal never dies the moment you settle on the sofa with your laptop and a deadline."
+PART_A = "A Wi-Fi router on tiny legs that follows you from room to room so the signal never dies the moment "
+PART_B = "you settle on the sofa with your laptop and a deadline."
+
+SENTENCE = PART_A + PART_B
+
+assert "\n" not in SENTENCE and len(SENTENCE) == 154
 
 def main():
     out_dir = os.environ.get("OUTPUT_DIR", "/output")
